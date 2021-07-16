@@ -25,7 +25,7 @@ import React, {
     const [isFocused, setIsFocused] = useState(false);
   
     const inputRef = useRef(null)
-    const { fieldName, defaultValue, error, registerField } = useField(name);
+    const { fieldName, defaultValue, registerField } = useField(name);
   
     useEffect(() => {
       console.log(currValue)

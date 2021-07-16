@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { ChevronLeft, Calendar } from 'react-feather'
 import { Form } from '@unform/web';
 import { useHistory, useLocation } from 'react-router-dom'
@@ -11,7 +11,7 @@ import DatePicker from '../../components/DatePicker'
 import {
     Container,
     CategoryContainer,
-    Category,
+    CategoryElement,
     DateContainer,
     CreateTaskButton,
 } from './styles'
@@ -106,7 +106,7 @@ const NewTask = () => {
                 category
             }
         })
-    }, [dateSelected, categories, stateLocation])
+    }, [dateSelected, categories, stateLocation, createTask, updateTask, history])
 
     const handleSelectCategory = useCallback((id: number) => {
         const categoriesCopy = [...categories].map(elem => {
@@ -198,13 +198,13 @@ const NewTask = () => {
 
                 <CategoryContainer>
                     {categories.map(elem => (
-                        <Category 
+                        <CategoryElement 
                             key={elem.id} 
                             selected={elem.selected} 
                             onClick={() => handleSelectCategory(elem.id)}    
                         >
                             <h1>{elem.name}</h1>
-                        </Category>
+                        </CategoryElement>
                     ))}
                 </CategoryContainer>
 

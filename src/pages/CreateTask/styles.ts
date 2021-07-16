@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-interface CategoryProps {
+interface CategoryElementProps {
     selected?: boolean;
 }
 
@@ -18,7 +18,7 @@ export const CategoryContainer = styled.div`
     align-items: center;
 `
 
-export const Category = styled.div<CategoryProps>`
+export const CategoryElement = styled.div<CategoryElementProps>`
     background: ${props => props.selected ? '#1900FF' : 'rgba(189, 205, 216, 0.1)'};
     mix-blend-mode: normal;
     border-radius: 5px;

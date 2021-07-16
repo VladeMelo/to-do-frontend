@@ -135,7 +135,7 @@ const DatePicker = ({ setDateSelected, toggleOpenDatePicker }: DatePickerProps) 
         setDateSelected(dateSelectedAndOrganized)
 
         toggleOpenDatePicker()
-    }, [days, setDateSelected, toggleOpenDatePicker])
+    }, [days, setDateSelected, toggleOpenDatePicker, month, year])
 
     const dateHeaderFormatted = useMemo(() => {
         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

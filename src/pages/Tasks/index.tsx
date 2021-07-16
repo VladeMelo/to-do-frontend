@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react'
+import React, { useState, useCallback, useEffect, useMemo } from 'react'
 import { Check, ChevronDown, MoreVertical, Edit2, Plus, Trash2, Search } from 'react-feather'
 import { useHistory, useLocation } from 'react-router-dom'
 
